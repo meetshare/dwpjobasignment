@@ -11,6 +11,6 @@ Scenario: Get all users from the given city endpoint
   And verify the number of "6" return
 
 Scenario: Get all users within 50 miles radius of London using the city users endpoint
-  When sending the request to "city/London/users"
+  When sending the request to "users"
   Then verify the successful response
   And print users to console
