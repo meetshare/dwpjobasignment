@@ -1,5 +1,6 @@
 Feature: DWP Assignment
 
+
 Scenario: Get all users from the given users endpoint
   When sending the request to "users"
   Then verify the successful response
