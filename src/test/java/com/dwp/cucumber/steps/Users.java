@@ -8,7 +8,6 @@ import cucumber.api.java.en.When;
 import io.restassured.response.Response;
 import net.thucydides.core.annotations.Steps;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.junit.Assert;
 
@@ -27,7 +26,7 @@ public class Users {
         Assert.assertEquals(200,response.statusCode());
     }
 
-    @Then("^verify the number of \"([^\"]*)\" return$")
+    @Then("^verify the number of \"([^\"]*)\" users return$")
     public void verify_the_number_of_return(String expectCount) {
         List<User> allUsers = TestUtil.getAllUsers(response.body().asString());
         Assert.assertEquals(Integer.parseInt(expectCount),allUsers.size());
