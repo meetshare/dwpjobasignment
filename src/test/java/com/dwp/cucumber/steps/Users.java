@@ -38,7 +38,7 @@ public class Users {
 
         List<User> allUsers = TestUtil.getAllUsers(response.body().asString());
         allUsers.stream()
-                .filter(user -> TestUtil.getDistanceFromLondon(Double.parseDouble(user.getLatitude()), Double.parseDouble(user.getLongitude())) <= 25000)
+                .filter(user -> TestUtil.getDistanceFromLondon(Double.parseDouble(user.getLatitude()), Double.parseDouble(user.getLongitude())) <= 50)
                 .forEach(System.out::println);
     }
 
