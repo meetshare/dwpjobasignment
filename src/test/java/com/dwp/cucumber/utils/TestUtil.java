@@ -13,7 +13,6 @@ import org.apache.lucene.spatial.util.GeoDistanceUtils;
 import static com.spatial4j.core.distance.DistanceUtils.KM_TO_MILES;
 
 /*
-
     This class has helper function to parse the response received from endpoints
     And also, the function to verify the users within miles of a city
  */
@@ -40,6 +39,11 @@ public class TestUtil {
         return allUsers;
     }
 
+    /*
+        This function will return the value which in miles if we pass latitude and longitude.
+        The base reference is hardcoded with the London latitude(51.509865) and longitude(-0.118092) values.
+
+     */
     public static double getDistanceFromLondon(double lat,double lon){
         double distance = GeoDistanceUtils.haversin(lat, lon, LONDON_LAT, LONDON_LON);
 
